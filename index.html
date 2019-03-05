@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Question and answers</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="stylee.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    
+   </head>
+   <body>
+      <div class="container" >
+         <div style="text-align:center">
+            <h1 >Rheumatologic Diseases:Screening Questionnaire</h1>
+           
+         </div>
+      
+         <form name="form1" onsubmit='return validate(this)'>
+         <div class="qheader">
+            1) Do you feel persistent pain in one or more of your joints?
+         </div>
+         <div class="qselections">
+            <input type="radio" name="Yn" value=1 onclick="show1();" />No
+            <input type="radio" name="Yn" value=1  onclick="show2();"  />Yes
+            <div id="div1"  class="collapse">
+               if yes how many?<br>
+               <input type="checkbox" value=1 name="question1" class="answer1" onclick="show7();" >1
+               <input type="checkbox" value=2 name="question1" class="answer1" onclick="show8();">2-5
+               <input type="checkbox" value=3 name="question1"class="answer1" onclick="show8();">5<br>
+               <div id="sides">
+                  <input type="checkbox" value=0 name="question1" class="answer1a">One side
+                  <input type="checkbox" value=4 name="question1" class="answer1a">Both side<br>
+               </div>
+               <br>
+               a) Do you have swelling in the above mentioned painful joints?<br>
+               <input type="radio" name="question1" value=1  />No
+               <input type="radio" name="question1" value=1  />Yes<br><br>
+               b)Since how long have you been experiencing these problems?<br>
+               <input type="checkbox" value=0 name="question1" class="answer11"> Few months
+               <input type="checkbox" value=1 name="question1" class="answer11"> 1 yr
+               <input type="checkbox" value=2 name="question1" class="answer11"> 2-5 yrs
+               <input type="checkbox" value=3 name="question1" class="answer11"> &gt;5 yrs<br>
+               <br>
+               c) Whether the pain is due to a recent injury occurred while playing, at work or at home ?<br>
+               <input type="radio" name="qu1" value=1  />No
+               <input type="radio" name="qu1" value=-2  />Yes<br><br>
+            </div>
+         </div>
+         <div class="qheader">
+            2) Do you have persistent low back pain or buttock pain for &gt; 3 months, 
+            which is obstracting you sleep?
+         </div>
+         <input type="checkbox" value=1 name="question2"  class="answer2 open_options"> Low back pain
+         <input type="checkbox" value=1 name="question2"  class="answer2 open_options"> Buttock Pain
+         <input type="checkbox" value=2 name="question2"  class="answer2 open_options"> Both
+         <input type="checkbox" value=1 name="question2"  class="answer2 close_options"> No<br>
+         <div id="options"  >
+            <input type="checkbox" value=1 name="question2" class="answer2a"> Pain after waking up<br>
+            <input type="checkbox" value=0 name="question2" class="answer2a"> 
+            After excess of straining &gt; 30 min<br>
+            <input type="checkbox" value=1 name="question2" class="answer2b"> After prolonged sitting<br>
+            <input type="checkbox" value=0 name="question2" class="answer2b"> Dose it impair your daily activities<br>
+         </div>
+         <div class="qheader">
+            a) Do you have early morning stiffness which improves or worsen with activity?
+         </div>
+         <div class="qselections">
+            <input type="radio" name="question2" value=0  onclick="show5();" />No
+            <input type="radio" name="question2" value=1  onclick="show6();"/>Yes
+            <div id="div2"  >
+               <input type="checkbox" value=1 name="question2" id="answer2aa"> stiffness &gt; 30 min<br>
+               <input type="checkbox" value=0 name="question2" id="answer2aa"> stiffness &lt; 30 min <br>
+               <input type="checkbox" value=1 name="question2" id="answer2ab"> improves with activity<br>
+               <input type="checkbox" value=0 name="question2" id="answer2ab"> worsen with activity<br>
+            </div>
+         </div>
+         </br>
+         <div class="qheader">
+            3) Do you have deformity in your hands, feet or back?
+         </div>
+         <div class="qselections">
+            <input type="radio" name="question3" value=3 onclick="show4();" />Yes
+            <input type="radio" name="question3" value=0 onclick="show3();" />No
+            <div id="div3" class="collapse">
+               <input type="checkbox" value=0 name="question3" class="question3"> Deformity in hands<br>
+               <input type="checkbox" value=0 name="question3" class="question3"> Deformity in legs<br>
+               <input type="checkbox" value=0 name="question3" class="question3"> Deformity in back<br>
+            </div>
+         </div>
+         <div class="qheader">
+            a) Are you experiencing any sound (crepitus) on moving the joint?
+         </div>
+         <div class="qselections">
+            <input type="radio" value=2 name="YorN3a"> Yes
+            <input type="radio" value=0 name="YorN3a"> No<br>
+         </div>
+         <div class="qheader">
+            b) Do you experiance excessive fatigue or feel abnormally feverish
+         </div>
+         <div class="qselections">
+            <input type="radio" value=2 name="YorN3b"> Yes
+            <input type="radio" value=0 name="YorN3b">No<br>
+         </div>
+         </br>
+         <div class="qheader">
+            4 a) Do you have any of the following symptoms?
+         </div>
+         <input type="checkbox" value=1 name="question4" id="answer4a"> Generalized body pain<br>
+         <input type="checkbox" value=4 name="question4" id="answer4a"> Difficulty in using upper or lower limb due to muscle weakness<br>
+          
+         <input type="checkbox" value=1 name="question4" id="answer4a"> Red skin rash with raised borders over your face, scalp, neck or behind ears<br>
+         <input type="checkbox" value=1 name="question4" id="answer4a"> Flat facial skin rash over bridge of your nose, across cheeks which is non-itchy and scarring<br>
+         <input type="checkbox" value=1 name="question4" id="answer4a"> Sleep disturbance<br>
+         <input type="checkbox" value=1 name="question4" id="answer4an"> None<br>
+         <div class="qheader">
+            b) Do you have any problems below
+         </div>
+         <div class="qselections">
+            <input type="checkbox" value=1 name="question4" id="answer4b"> Unusually / excessively sensitive to sunlight<br>
+            <input type="checkbox" value=1 name="question4" id="answer4b"> Ulcers of mouth, nose or throat<br>
+            <input type="checkbox" value=1 name="question4" id="answer4b"> Having excessive hair loss in last three months<br>
+            <input type="checkbox" value=3 name="question4" id="answer4b"> Does your fingers and toes react to cold, turning blue<br>
+            <input type="checkbox" value=0 name="question4" id="answer4bn"> None<br>
+         </div>
+         <div class="qheader">
+            c)Have you experienced?
+         </div>
+         <input type="checkbox" value=2 name="question4" id="answer4c"> Irrational or disturbed thought process<br>
+         <input type="checkbox" value=1 name="question4" id="answer4c"> Seizures<br>
+         <input type="checkbox" value=1 name="question4" id="answer4c"> Personality changes<br>
+         <input type="checkbox" value=1 name="question4" id="answer4c"> Anxiety<br>
+         <input type="checkbox" value=0 name="question4" id="answer4cn"> None<br>
+         <div class="qheader">
+            d) Do you have inflammation of kidney or abnormal urine analysis showing protein/cellular caste in the urine?   </div>
+         <input type="radio" value=3 name="Yn4d">Yes 
+         <input type="radio" value=0 name="Yn4d">No<br>
+         <div class="qheader">
+            e) Whether the clinical/ findings show any of the following?
+         </div>
+         <input type="checkbox"  name="Yn4e" value=4 class="4e"> Abnormal blood counts (leucopenia, thrombocytopenia, anemia)<br>
+         <input type="checkbox"  name="Yn4e" value=6 class="4e"> Blood test positive for ds DNA, ANA, anti-Sm, anticardiolipin antibody, lupus anticoagulant, RO52, SSA or SSB <br>
+         <input type="checkbox" value=0 name="Yn4e" class="4en"> None<br>
+         <div class="qheader">
+            5) Do you have swelling in the glands around your face or neck?
+         </div>
+         <div class="qselections">
+            <input type="radio" name="question5" value=3  />Yes
+            <input type="radio" name="question5" value=1  />No
+            </br>
+            a) Do you have dental problems (i.e. dental decay, oral disease)
+         </div>
+         <div class="qselections">
+            <input type="radio" value=2 name="YorN5a"> Yes
+            <input type="radio" value=0 name="YorN5a"> No<br>
+         </div>
+         <div class="qheader">
+            b) Have you experienced any of the following in the last three months?
+         </div>
+         <input type="checkbox" value=2 name="question5"  id="answer5"> Gritting sensation in the eye</br>
+         <input type="checkbox" value=1 name="question5"  id="answer5"> Redness of the eye</br>
+         <input type="checkbox" value=2 name="question5"  id="answer5"> Use eye drops for dry eyes</br>
+         <input type="checkbox" value=1 name="question5"  id="answer5n"> None</br>
+         <div class="qheader"></br>
+            6) Do you have one or frequent episodes of sudden onset of severe pain in big toe?
+         </div>
+         <input type="radio" value=3 name="YorN6a">Yes
+         <input type="radio" value=0 name="YorN6a">No<br>
+         <div class="qheader">
+            a)	Whether the uric acid value is <br>
+         </div>
+         <input type="radio"  name="YorN6b" value=2> &gt;8
+         <input type="radio"  name="YorN6b" value=0> &lt;8 </br>
+         </br>
+         
+      <div style="text-align: center" id="submit">
+            <input class="btn btn-primary" type=submit value=Submit> 
+		</div>
+     
+      <h5>
+         <ul>
+            
+           <b> Disclaimer:</b>
+           <li>This  questionnaire is intended for informational purposes only  and does not substitute medical advice or consultation. </li>
+                  <li>Always consult your physician or other qualified health provider with any questions you may have regarding  a medical condition.
+             </li>
+                </ul>
+      </h5> 
+</div>
+      <script type="text/javascript" src="quiz.js"></script>
+   </body>
+</html>

@@ -1,0 +1,49 @@
+.jconfirm-title{
+   display: none;
+}
+body{
+      font-size: 1.75rem;
+      background-color: #c9fcfc;
+      color: black;
+      }
+      	.qheader{
+      color:#000036;
+      font-weight:bold;
+      }
+      .container{
+      background-color: #eff1f1;
+      border: 2px solid gray;
+      max-width: 70%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      }
+  
+      .btn{
+      width: 150px;
+      font-size: 22px;
+      margin-bottom: 20px;
+            }
+            #submit{
+              border-bottom: 2px solid aqua;
+            }
+      h1{
+      color:#001230;
+      font-weight:bold;
+       border-bottom: 2px solid aqua;
+       padding-bottom: 10px;
+          }
+      
+      @media only screen and (max-width: 600px) {
+      body {
+      font-size: 1.25rem;
+      }
+      h1{
+      font-size: 22px;
+      }
+      h2{
+      font-size: 16px;
+      }
+      }
+      .alert{
+      Width: '30%';
+      }
